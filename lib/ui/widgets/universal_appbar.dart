@@ -17,6 +17,9 @@ class UniversalAppbar extends StatelessWidget with PreferredSizeWidget {
     return AppBar(
       toolbarHeight: height,
       // backgroundColor: ,
+      leading: Icon(
+        Icons.arrow_back,
+      ),
       elevation: 0,
       title: Text(
         title,

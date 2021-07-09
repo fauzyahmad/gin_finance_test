@@ -44,6 +44,25 @@ class _CustomTextFieldState extends State<CustomTextField> {
     return TextFormField(
       inputFormatters: widget.inputFormatter,
       obscureText: widget.obscureText,
+      controller: widget.controller,
+      textInputAction: widget.actionKeyboard,
+      keyboardType: widget.actionType,
+      decoration: InputDecoration(
+        contentPadding: EdgeInsets.symmetric(vertical: 6.0, horizontal: 10),
+        fillColor: Colors.white,
+        filled: true,
+        border: OutlineInputBorder(
+          borderRadius: BorderRadius.circular(8.0),
+          borderSide: BorderSide(color: Colors.grey[400]!),
+        ),
+        errorBorder: OutlineInputBorder(
+          borderRadius: BorderRadius.circular(8.0),
+          borderSide: BorderSide(color: Colors.red[400]!),
+        ),
+        // errorStyle:
+        hintText: widget.hintText,
+        prefix: widget.prefixIcon,
+      ),
     );
   }
 }
