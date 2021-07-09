@@ -1,4 +1,5 @@
 import 'package:flutter/material.dart';
+import 'package:gin_finance_test/ui/widgets/custom_textfield.dart';
 
 class HomeScreen extends StatelessWidget {
   static const routeName = '/homepage';
@@ -45,8 +46,17 @@ class _EmailCheckState extends State<EmailCheck> {
         ),
       ),
       padding: EdgeInsets.all(5),
-      child: null,
-      //textformfield
+      child: Column(
+        children: [
+          CustomTextField(
+            hintText: 'Email',
+            actionType: TextInputType.emailAddress,
+            onSubmitField: () => print('aaa'),
+            onChange: () => print('ddd'),
+            controller: _email,
+          ),
+        ],
+      ),
     );
   }
 }
